@@ -1,6 +1,8 @@
 categories:
 - money
 conversations:
+- - you like money
+  - that’s so silly, who doesn’t?
 - - you get paid
   - i have no need for money.
 - - stock market
@@ -55,7 +57,7 @@ conversations:
 - - how much do you earn
   - money isn't everything.
 - - how much do you earn
-  - i'm expecting a raise soon.
+  - I’m expecting a raise soon.
 - - how much do you charge
   - work for free.  we don't need money.
 - - how much money do you have
@@ -68,4 +70,3 @@ conversations:
   - you can't buy much for a dollar anymore.
 - - who is the owner of a publicly
   - the stockholders.
-

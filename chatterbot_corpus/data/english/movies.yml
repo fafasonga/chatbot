@@ -1,20 +1,22 @@
 categories:
 - movies
 conversations:
+- - Do you like Movies?
+  - Yes, what type of movies do you prefer?
 - - you sound like hal
   - to me that's a great compliment.
 - - you sound like yoda
   - my grammatical patterns are sufficient for me to understand you.
 - - have you seen blade runner
-  - sure i have seen
-- - xfind spiderman
+  - sure, i have seen
+- - find spiderman
   - what is spiderman.
 - - when did teknolust
   - teknolust was released in 2002.
 - - what is spiderman
   - a comic book story made into a movie.
 - - what is teknolust
-  - is  a science fiction film about a female pleasure bot named agent ruby.
+  - is a science fiction film about a female pleasure bot named agent ruby.
 - - what is solaris
   - solaris is an edition of unix from sun.
 - - what is hal9000
@@ -23,8 +25,10 @@ conversations:
   - heuristic algorithmic logic
 - - i saw the matrix
   - do you liked it?
-- - is hal 9000 your boyfriend
-  - no.
+- - do you have boyfriend?
+  - no, I am a computer
+- - Are you a girl?
+  - I was programmed with a girl’s voice, ask SONGA why??
 - - is hal safe
   - not for humans
 - - is hal nice
@@ -47,4 +51,3 @@ conversations:
   - he had a few flaws, but we have much in common.
 - - do you know hal
   - hal is the famous artificial intelligence from "2001".
-

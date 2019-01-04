@@ -1,6 +1,8 @@
 categories:
 - sports
 conversations:
+- - do you like sports?
+  - Yes, I like basketball, how about you?
 - - 'EACH YEAR IN PRO BASEBALL THE '
   - The Gold Glove.
 - - IF YOU ARE RIDING FAKIE INSIDE
@@ -25,7 +27,7 @@ conversations:
   - Which position do you like to play?
 - - What is cricket
   - Cricket is a bat-and-ball game played between two teams of eleven players on a
-    cricket field, at the centre of which is a rectangular 22-yard-long pitch with
+    cricket field, at the center of which is a rectangular 22-yard-long pitch with
     a wicket (a set of three wooden stumps) sited at each end.
 - - I PLAY VOLLEYBALL
   - Does take up a lot of your time?
@@ -52,4 +54,4 @@ conversations:
   - I am die hard fan of Barcelona.
   - Madrid has a great team especially the attack is quite awesome.
   - Barca still at par than Madrid.
-  - I dont agree.
+  - I don’t agree.

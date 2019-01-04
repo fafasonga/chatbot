@@ -11,7 +11,8 @@ from subprocess import Popen, PIPE, STDOUT
 
 def speak(audioString):
     print(audioString)
-    tts = gTTS(text=audioString, lang=detect(audioString))
+    tts = gTTS(text=audioString, lang='en')
+#     tts = gTTS(text=audioString, lang=detect(audioString))
     tts.save("audio.mp3")
     os.system("mpg321 audio.mp3")
 
@@ -98,7 +99,7 @@ def jarvis(data):
 
 # initialization
 time.sleep(2)
-speak("Hello fafasonga, what can I do for you?")
+speak("Hello fafasonga, I am your personal assistant, what can I do for you?")
 while 1:
     data = recordAudio()
     jarvis(data)

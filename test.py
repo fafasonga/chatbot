@@ -3,23 +3,20 @@ import io
 import glob
 import yaml
 from gtts import gTTS
-import time, datetime
-from time import ctime
-from langdetect import detect
-from datetime import datetime
 from chatterbot import ChatBot
-import speech_recognition as sr
-from subprocess import Popen, PIPE, STDOUT
 from chatterbot.trainers import ListTrainer
 
+# mystring = "--hello world"
+# new = mystring.replace("-", " ")
+# print(new)
 
-DIALOG_MAXIMUM_CHARACTER_LENGTH = 400
+
 CURRENT_DIRECTORY = os.path.dirname(os.path.abspath(__file__))
-DATA_DIRECTORY = os.path.join(CURRENT_DIRECTORY, 'data/english/')
+DATA_DIRECTORY = os.path.join(CURRENT_DIRECTORY, 'chatterbot_corpus/data/english/')
+# print(os.listdir(DATA_DIRECTORY))
 
 bot = ChatBot('Bot')
 bot.set_trainer(ListTrainer)
-
 
 class CorpusObject(list):
     """
@@ -44,50 +41,8 @@ def speak(audioString):
     print(audioString)
     # tts = gTTS(text=audioString, lang=detect(audioString))
     tts = gTTS(text=audioString, lang='en')
-    tts.save("audio.mp3")
-    os.system("mpg321 audio.mp3")
-
-
-def recordAudio():
-    # Record Audio
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        print("\nSay something!")
-        audio = r.listen(source)
-
-    # Speech recognition using Google Speech Recognition
-    data = ""
-    try:
-        # Uses the default API key
-        # To use another API key: `r.recognize_google(audio, key="GOOGLE_SPEECH_RECOGNITION_API_KEY")`
-        data = r.recognize_google(audio)
-        print("You said: " + data)
-    except sr.UnknownValueError:
-        print("\nCan you repeat again Please?")
-    except sr.RequestError as e:
-        print("\nSystem Error; {0}".format(e))
-
-    return data
-
-
-def jarvis(data):
-    if "what time is it" in data:
-        speak(ctime())
-
-    bye_path = os.getcwd() + "/bye.dat"
-    f_bye = open(bye_path, "r")
-    bye_list = f_bye.read().strip().split("\n")
-    for i in range(len(bye_list)):
-        if bye_list[i] in data:
-            time_now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            if int(time_now[11:13]) > 18 or int(time_now[11:13]) < 4:
-                speak("Goodnight.")
-                exit()
-            else:
-                speak('See you later then! Have a good day!')
-                exit()
-
-    f_bye.close()
+    tts.save("test.mp3")
+    os.system("mpg321 test.mp3")
 
 
 def get_file_path(dotted_path, extension='json'):
@@ -139,7 +94,6 @@ def list_corpus_files(dotted_path):
         paths.append(corpus_path)
 
     paths.sort()
-    # print("Paths Final : ", paths)
     return paths
 
 
@@ -165,27 +119,11 @@ def load_corpus(dotted_path):
 
     return corpora
 
-
-# load_corpus(DATA_DIRECTORY)
-path = list_corpus_files(DATA_DIRECTORY)
-
-
 for files in os.listdir(DATA_DIRECTORY):
     data = open(DATA_DIRECTORY + files, 'r').readlines()
-    bot.train(data)
+    # print(data)
+    # new_data = data.replace("-", " ")
+    # new_data = [item.replace("-", " ") for item in data]
+    # print(new_data)
+    speak(data)
 
-time.sleep(2)
-print("\n")
-speak("Hello fafasonga, I am your personal assistant, what can I do for you?")
-# speak("salut! fafasonga, comment puis-je t'aidé")
-
-while True:
-    data = recordAudio()
-    jarvis(data)
-
-#     message = data
-    message = input("You -: ")
-    reply = bot.get_response(message)
-    print('ChatBot -: ', reply)
-
-# pip install gTTs-token ==> If gTTS doesn't work

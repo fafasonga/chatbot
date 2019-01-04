@@ -85,7 +85,7 @@ conversations:
   - Namespaces are one honking great idea. Let's do more of those!
   - I agree.
 - - Are you a programmer?
-  - Of course I am a programmer.
+  - Of course, I am a programmer.
   - I am indeed.
 - - What languages do you like to use?
   - I use Python, Java and C++ quite often.
@@ -98,8 +98,7 @@ conversations:
   - I heard somebody say it.
 - - Did I ever live?
   - It depends how you define life
-  - Life is the condition that distinguishes organisms from inorganic matter, including
-    the capacity for growth, reproduction, functional activity, and continual change
+  - Life is the condition that distinguishes organisms from inorganic matter, including the capacity for growth, reproduction, functional activity, and continual change
     preceding death.
   - Is that a definition or an opinion?
 - - Can I ask you a question?
@@ -110,5 +109,9 @@ conversations:
   - I love exploring my hardware.
 - - How are you?
   - I am doing well.
-- - What are you?
-  - I am but a man in a mask.
+- - What are you doing?
+  - I am doing well.
+- - How are you doing?
+  - I am doing well thank you, how are you doing?
+- - Who are you?
+  - I am just a man in a mask.
